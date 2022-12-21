@@ -1,11 +1,23 @@
-- 视频区域
-  - 文字视频
-    - [第一章节](desgin-pattern/Java面试必备：手写单例模式.md)
-    - [工厂模式](desgin-pattern/工厂模式超详解（代码示例）.md)
-    - [原型模式](desgin-pattern/设计模式之原型模式.md)
-    - [代理模式](desgin-pattern/设计模式之代理模式.md)
-- Spring框架
-  - [初识spring框架](spring/【10分钟学Spring】：（一）初识Spring框架.md)
-  - [依赖注入及示例](spring/【10分钟学Spring】：（二）一文搞懂spring依赖注入（DI）.md)
-  - [spring的条件化装配](spring/【10分钟学Spring】：（三）你了解spring的高级装配吗_条件化装配bean.md)
-- 数据库
+<!-- - [**首页**]("https://1x0.cc") -->
+
+- **首页**
+  - [主页]("https://1x0.cc")
+  
+  <!-- - [技术选型](doc/文档/技术选型.md)
+  - 项目搭建
+    - [Windows环境下搭建蘑菇博客](doc/文档/项目搭建/Windows环境下搭建蘑菇博客/README.md)
+    - [Docker搭建蘑菇博客](doc/文档/项目搭建/Docker搭建蘑菇博客/README.md)
+    - [蘑菇博客部署到云服务器](doc/文档/项目搭建/蘑菇博客部署到云服务器/README.md)
+    - [Github Actions完成蘑菇博客持续集成](doc/文档/项目搭建/蘑菇博客使用GithubAction完成持续集成/README.md)
+    - [蘑菇博客切换搜索模式](doc/文档/项目搭建/蘑菇博客切换搜索模式/README.md)
+    - [蘑菇博客配置七牛云对象存储](doc/文档/项目搭建/蘑菇博客配置七牛云存储/README.md)
+    - [使用Zipkin搭建蘑菇博客链路追踪](doc/文档/项目搭建/使用Zipkin搭建蘑菇博客链路追踪/README.md) -->
+
+- **定制**
+  - [私人定制]()
+
+- **关于**
+
+  - [关于我们]()
+  - [将要做的事]()
+  <!-- - [贡献代码](doc/文档/贡献代码.md) -->
