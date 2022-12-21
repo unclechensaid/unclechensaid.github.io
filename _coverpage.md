@@ -1,6 +1,6 @@
-<img width="180px" style="border-radius: 50%" bor src="./doc/images/gitee/favicon2.ico">
+<img width="180px" style="border-radius: 50%" bor src="static/img/logo.png">
 
-# 等邻网
+# 等邻
 
 - 1 x 0 = 0，谐音等邻网落地。取材于互联网，服务于互联网。你我皆为邻居
 
