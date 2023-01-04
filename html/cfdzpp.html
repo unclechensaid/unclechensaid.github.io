@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://cdn.jsdelivr.cn/npm/@bootcss/v3.bootcss.com@1.0.52/favicon.ico">
+  <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer/">
+  <title>Sticky Footer Template for Bootstrap</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <style>
+    body{
+      /*background-image: url("https://bpic.588ku.com/element_pic/20/06/30/a06afdadee179c2c2bf1d0ed75f7a15e.jpg%21/fw/224/quality/90/unsharp/true/compress/true");*/
+      /*background-repeat: repeat-x;*/
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h1>对战匹配</h1>
+  </div>
+  <p class="lead">高端的玩家往往以组队猎物的形式出现，对战匹配是一个随机打乱队形的模式,进行组队对战。组队实力听天由命！当然，你也可以我命由我不由天带扶不起的队友杀出重围！！！</p>
+  <p>Use <a href="JavaScript:void(-1)" onclick="random()">对战匹配</a> if need be, too.</p>
+</div>
+<div>
+  <div class="container">
+    <div class="">
+      <textarea class="form-control" rows="3" id="val"></textarea>
+    </div>
+  </div>
+  <h1></h1>
+  <div class="container">
+    <div class="bs-example" data-example-id="list-group-variants">
+      <div class="row">
+        <div class="col-sm-6 col-xs-6 col-md-6">
+          <div class="list-group" id="v1">
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-6 col-md-6">
+          <div class="list-group" id="v2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted" id="des">杜绝外挂请文明丨绿色对战匹配.</p>
+  </div>
+</footer>
+<script>
+  function random(){
+    var ckpp = $.cookie('pp');
+    if (ckpp != null && ckpp != '' && ckpp !=undefined){
+      alert("当前匹配记录已生成，请一分钟后再重新匹配"+ckpp);
+      return;
+    }
+
+    var str = $.trim(document.getElementById("val").value).replace(/\s+/g, ' ');
+    if(str == null || str == "" || str == undefined){
+      alert("请输入对战人员信息，用空格隔开");
+      return;
+    }
+    var arr = str.split(' ');
+    sort(arr);
+
+    //设置一个5分钟内不弹出订阅窗口的cookie
+    var now = new Date();
+    now.setTime(now.getTime() + 1 * 60 * 1000);
+    //页面没有设置过cookie，重新刷新页面，打开别的页面等,默认当前时间+5分钟过期时间
+    $.cookie('pp', '1', { expires: now, path: "/", domain: window.DomainName });
+  }
+
+  function sort(arr){
+    for (let i = 1; i < arr.length; i++) {
+      const random = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[random]] = [arr[random], arr[i]];
+    }
+    var v1 = document.getElementById("v1");
+    v1.innerHTML = "<a href=\"#\" class=\"list-group-item disabled\">进攻方</a>";
+    var v2 = document.getElementById("v2");
+    v2.innerHTML = "<a href=\"#\" class=\"list-group-item disabled\">防守方</a>"
+    for (let a = 0; a < arr.length; a++){
+      if(a % 2 == 0){
+        var html = "<a class=\"list-group-item list-group-item-warning\">"+arr[a]+"</a>"
+        v1.innerHTML += html;
+      }else{
+        var html = "<a class=\"list-group-item list-group-item-info\">"+arr[a]+"</a>"
+        v2.innerHTML += html;
+      }
+    }
+    datetimeout()
+  }
+
+  function datetimeout(){
+    var myDate = new Date;
+    var year = myDate.getFullYear(); //获取当前年
+    var mon = myDate.getMonth() + 1; //获取当前月
+    var date = myDate.getDate(); //获取当前日
+    var h = myDate.getHours();//获取当前小时数(0-23)
+    var m = myDate.getMinutes();//获取当前分钟数(0-59)
+    var s = myDate.getSeconds();//获取当前秒
+    var week = myDate.getDay();
+    var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    console.log(year, mon, date, weeks[week])
+    var des = document.getElementById("des");
+    des.innerHTML = "当前匹配操作为"+year+"年"+mon+"月"+date+"日 "+p(h)+":"+p(m)+":"+p(s)+" "+weeks[week];
+  }
+
+  //转换格式
+  function p(s) {
+    return s < 10 ? '0' + s: s;
+  }
+</script>
+</body>
+</html>
