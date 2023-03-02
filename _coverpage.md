@@ -9,9 +9,9 @@
     <span class="badge badge-warning">视频</span>
     <span class="badge" style="color: #ffffff;background-color: #d41e94;">单机游戏</span>
     <span class="badge" style="color: #ffffff;background-color: #78539a;">网络游戏</span>
-    <span class="badge" style="color: #ffffff;background-color: #50a083;">鱼塘资讯</span>
-    <span class="badge badge-dark">任意摸鱼</span>
-    <span class="badge" style="color: #ffffff;background-color: #b37744;">TouchBar</span>
+    <span class="badge" style="color: #ffffff;background-color: #50a083;">电脑应用</span>
+    <span class="badge badge-dark">活动资讯</span>
+    <span class="badge" style="color: #ffffff;background-color: #b37744;">游戏软件</span>
 </div>
 
 <style>
@@ -30,7 +30,7 @@
 </style>
 
 
-> 💪Docsify使用指南，使用Typora+Docsify打造最强
+> 💪使用Keyboard + Mouse让复杂的操作简单化
 
 - 简单、轻便 (1~20mB)
 - 无需安装丨绿色安全丨即开即用
