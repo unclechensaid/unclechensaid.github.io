@@ -1,9 +1,9 @@
 
 
----
----
 
-<div style="display: flex; justify-content: space-around;padding: 0px 50px">
+
+
+<div style="display: flex; justify-content: space-around;padding: 0px 50px; margin:100px 0px; ">
     <div style="flex-grow: 1">
         <div class="div1">
             <div class="container">
@@ -27,12 +27,9 @@
 
 
 
----
----
----
----
 
-<div style="display: flex; justify-content: space-around;padding: 0px 50px">
+
+<div style="display: flex; justify-content: space-around;padding: 0px 50px;margin:100px 0px;">
     <div>
         <div>
             <img style="height: 280px; width: auto;justify-content: flex-end" src="https://www.kokojia.com/Public/images/upload/article/2017-03/58be6bd41fc9b.jpg" />
@@ -56,12 +53,11 @@
 
 
 
----
----
----
----
 
-<div style="display: flex; justify-content: space-around;padding: 0px 50px">
+
+
+
+<div style="display: flex; justify-content: space-around;padding: 0px 50px;margin:100px 0px;">
     <div style="flex-grow: 1">
         <div class="div1">
             <div class="container">
@@ -82,12 +78,9 @@
         </div>
     </div>
 </div>
+<br/><br/><br/>
 
 
----
----
----
----
 <div style="display: flex;justify-content: space-around; background-color: #c7e8e9; float: bottom">
     <div style="">
         <div class="container">
