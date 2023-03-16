@@ -16,7 +16,29 @@
             crossorigin="anonymous"></script>
     <script>
         $(function (){
-            autoPlay();
+            var key = $.cookie('key');
+            if(key!='' && key!=undefined && key!='undefined'){
+                $("#keyInput").val(key);
+                $("#keyCheck").prop('checked',true);
+            }
+
+            // $("#keyButton").click(function (){
+            //     if($("#keyInput").val()!= ''){
+            //         $.cookie('key', $("#keyInput").val());
+            //     }
+            // })
+
+            $("#keyCheck").click(function (){
+                 var keyCheck = $("#keyCheck").prop('checked');
+                 if(keyCheck){
+                     if($("#keyInput").val()!= ''){
+                         $.cookie('key', $("#keyInput").val());
+                     }
+                 }else{
+                     $.removeCookie('key');
+                 }
+            })
+
         })
 
         function ccPlay(){
@@ -83,14 +105,8 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="bgvedio">
-<!--                    <video ishivideo="true" autoplay="true" isrotate="true" autoHide="true" controls="controls">-->
-<!--                        <source src="media1.mp4" type="video/mp4" id="h5v">-->
-<!--                    </video>-->
                     <video class="center-block vedios" controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" disablePictureInPicture
-                           style="object-fit:fill;width: 240px; height: 426px;" id="dliframe" src="" auto play="autoplay" controls="controls"  preload="auto" poster="../../media/bg5.png"></video>
-<!--                    <iframe src="dl.html" style="width: 100%; height: 100%" height="100%" frameborder="0" id="dliframe" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">-->
-
-<!--                    </iframe>-->
+                           style="object-fit:fill;width: 300px; height: 528px;" id="dliframe" src="" auto play="autoplay" controls="controls"  preload="auto" poster="../../media/bg5.png"></video>
                     <div class="pull-left">
                         <a href="javascript:void(-1)" onclick="ccPlay()">换一个</a>
                     </div>
@@ -98,8 +114,8 @@
             </div>
             <div class="col-lg-6">
                 <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
-                <p class="text-muted" id="keyDes">如果你还没有拿到口令，请联系客服人员.</p>
-                <div class="input-group">
+                <p class="text-muted" id="keyDes">如果你还没有拿到口令，请联系客服.</p>
+                <div class="col-lg-6 input-group">
                     <input type="text" class="form-control" placeholder="请输入口令..." id="keyInput">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" id="keyButton">确定!</button>
@@ -107,7 +123,7 @@
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> Check me out
+                        <input type="checkbox" id="keyCheck"> 记住口令
                     </label>
                 </div>
             </div>
@@ -115,18 +131,19 @@
     </div>
 
     <footer class="footer">
-
+        <div style="text-align: center">
+            <span class="center-block" id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        </div>
     </footer>
 
 
-<!--<script src="static/js/jquery.js"></script>-->
-    <script
-            src="https://code.jquery.com/jquery-3.6.4.js"
-            integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-            crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jqueryCookie.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 </body>
 </html>
