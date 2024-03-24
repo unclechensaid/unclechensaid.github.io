@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <style>
+        html{overflow-x:hidden;overflow-y:hidden;}
+        body{padding: 0;
+            margin: 0;
+            font-family: "helvetica neue",arial,sans-serif;
+            font-size: 13px;
+            cursor:default;
+        }
+        span{font-size: 13px; letter-spacing: 1px;}
+        .bor-bo{
+            border-bottom: 1px solid rgba(93, 109, 129, 0.1);
+            padding: 8px 0px 30px 0px;
+        }
+        .main{width: 900px; height: 600px; background-color: ;}
+        .left_c{width: 500px; height: 800px; background-color: ; float: left; background-image: url("img/8.png")}
+        .right_c{width: 400px; height: 800px; background-color: ; float: left;background: linear-gradient(147deg, #b89d71, #54acca);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b89d71', endColorstr='#54acca',GradientType=0 );}
+        :root {filter:none;}
+        .rc_m{ padding: 20px; margin-top: 20px;}
+        .l-pwd{
+            /*margin-top: 20px;*/
+            /*position: relative;*/
+            /*top: 200px;*/
+            height: 30px;
+        }
+        /*用于清除l-pwd的浮动*/
+        /*.l-pwd::after {*/
+        /*    content: "";*/
+        /*    display: block;*/
+        /*    clear: both;*/
+        /*}*/
+        .l-pwd input{
+            height: 35px;
+            line-height:35px;
+            width:250px;
+            padding: 0 15px;
+            border: none;
+            outline: none;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #e88f97;
+            background-color: rgba(93, 109, 129, 0.1);
+        }
+        .l-pwd button{
+            border: none;
+            /*position: absolute;*/
+            height: 35px;
+            /*padding-left: 11px;*/
+            /*top: 0;*/
+            /*right: 0;*/
+            width: 65px;
+            /*cursor: pointer;*/
+            color: #ffffff;
+            letter-spacing: 3px;
+            /*transition: 0.5s;*/
+            margin-left: -65px;
+            margin-top: 1px;
+            /*background-color: blue;*/
+            background-color: #ff5967;
+            line-height: 35px;
+            text-align: center;
+        }
+        .l-pwd button:hover{
+            background-color: #232121;
+            color: azure;
+            transition: 0.5s;
+        }
+
+
+        .aNFS41JL {
+            content: "体验";
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            transform: skew(-10deg) scale(0.8);
+            background-color: rgb(255, 89, 103);
+            height: 20px;
+            line-height: 20px;
+            margin-right: 2px;
+            font-size: 12px;
+            font-weight: lighter;
+            border-radius: 5px;
+            padding: 0px 3px;
+        }
+
+        .aNFS41JLT{
+            content: "资讯";
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            transform: skew(180deg) scale(0.8);
+            background-color: rgb(14, 12, 12);
+            height: 20px;
+            line-height: 20px;
+            margin-right: 2px;
+            font-size: 12px;
+            font-weight: lighter;
+            border-radius: 5px;
+            padding: 0px 3px;
+        }
+
+        .closebtn:hover,.minbtn:hover{
+            background-color:#232121;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+    <div class="main">
+        <div class="left_c"></div>
+        <div class="right_c" style=" position: relative;">
+            <div style="height: 30px;padding: 10px;">
+                <div style="float: left"><img alt="解绑" id="rolebtn" class="closebtn" src="img/role2.png" width="16" height="16" style="padding:15px;"></div>
+                <div style="float: left"><img alt="重启" id="reloadbtn" class="closebtn" src="img/reload2.png" width="16" height="16" style="padding:15px;"></div>
+                <!-- <div style="float: left"><img alt="隐藏TAB" id="closebtn" class="closebtn" src="img/hide.png" width="16" height="16" style="padding:14px;"></div> -->
+                
+                <div style="float: right"><img alt="关闭" id="closebtn" class="closebtn" src="img/close.png" width="25" height="25" style="padding:10px;"></div>
+                <div style="float: right"><img alt="最小化" id="minbtn" class="minbtn" src="img/min.png" width="25" height="25" style="padding:10px;"></div>
+            </div>
+            <div class="rc_m">
+
+
+                <div>
+                    <a class="aNFS41JL"><span id="softwareName" style="font-size: 12px;">身法</span>说</a><span style="margin-left: 5px; color: #333;" id="statusDes">小可爱在下面输入口令喔</span>
+                </div>
+
+
+                <div class="l-pwd bor-bo">
+                    <div style="float: left">
+                        <input type="text" placeholder="口令" maxlength="30" id="MyTextBox"/>
+                    </div>
+                    <div style="float: left">
+                        <button class="pwdbtn" id="keybtn">登录</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <a href="javascript:void(0)" class="aNFS41JLT" id="shequbtn">社区</a> <a class="aNFS41JLT">版本<span id="version" style="font-size: 12px;">1.0</span></a> <a class="aNFS41JLT">资讯</a>
+                </div>
+                <div style="padding: 8px 0px 30px 0px;">
+                    <span style="color: #333;"><span style="color: #ff5967">↑↑↑↑</span> 点击社区活动可领周卡一张~</span>
+                    <!--<iframe scrolling="no" src="https://widget.tianqiapi.com/?style=tx&skin=pitaya" frameborder="0" width="100%" height="30" allowtransparency="true"></iframe>-->
+                </div>
+
+
+                <div style=" position: absolute; bottom:0; width:360px;">
+                    <div>
+                        <a class="">使用须知</a>
+                    </div>
+                    <div style="padding: 8px 0px 30px 0px; ">
+                        <span style="color: #5b5a59; font-size: 12px;">当前脚本包括但不局限于操控用户计算机鼠标或键盘等，如对此表示有疑义请立即删除本脚本。脚本仅供学习交流，请勿用于任何不法用途
+                            </br></br></br>1.若口令不能输入可多点击几次输入框
+                            </br>2.当天需要更换机器请先点击上方解绑按钮
+                            </br>3.若提示系统异常，可对比手机查看计算机时间是否正确
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
